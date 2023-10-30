@@ -31,14 +31,15 @@ app.post('/', async (req, res) => {
 
 		const prompt = req.body.prompt;
 
+		
 		const response = await openai.createCompletion({
 			  model: "text-davinci-003",
 			  prompt: `${prompt}`,
 			  temperature: 0,
 			  max_tokens: 3000,
 			  top_p: 1,
-			  frequency_penalty: 0.5,
-			  presence_penalty: 0,
+			  frequency_penalty: 0.6,
+			  presence_penalty: 0.8,
 		
 		});
 

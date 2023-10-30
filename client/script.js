@@ -31,6 +31,7 @@ function typeText(element, text) {
   }, 20)
 }
 
+/*for every messages*/
 function generateUniqueId(){
   const timestamp = Date.now();
   const randomNumber = Math.random();
@@ -40,6 +41,7 @@ function generateUniqueId(){
 
 }
 
+/*message response*/
 function chatStripe(isAi, value, uniqueId) {
   return (
 
@@ -116,7 +118,7 @@ const handleSubmit = async (e) => {
 
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('keyup', (e) => {
-      if(e.keycode === 13){
+      if(e.key === 'Enter'){
         handleSubmit(e);
       }
   })
